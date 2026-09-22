@@ -17,7 +17,7 @@ const addToCart = (item) => {
     cart.push(item);
     return cart.length;
 };
-// first it will be referance error, because there is no cart variable)) second, if you want to save new datas you have to have the variable outside function, because once function is done it does not save old data.
+//impure. cart push item! it changes global let.
 const printSum = (a, b) => {
     console.log(a + b);
 };
@@ -25,12 +25,12 @@ const printSum = (a, b) => {
 // part b
 const addPointsPure = (currentScore, points) => currentScore + points;
 const withItem = (list, item) => [...list, item];
-const bigger = withItem (cart, 'bread');
+const bigger = withItem (cart, 'Bread');
 // both of them is pure, no side effects and gives always the same return, not depended on something else
     
-console.log(addPointsPure (0,5));
-console.log(addPointsPure(0,5));
-console.log(score);
-console.log(cart);
-console.log(bigger);
+console.log("addPointsPure(0,5):" ,addPointsPure (0,5));
+console.log("addPointsPure(0,5):" ,addPointsPure(0,5));
+console.log("score:" ,score);
+console.log("cart:" ,cart);
+console.log("bigger:" ,bigger);
 

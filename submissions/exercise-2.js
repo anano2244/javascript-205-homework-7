@@ -23,9 +23,9 @@
 // }
  const square = n => n * n;
  const isAdult = age => age >= 18;
- const greet = name => ` hello ${name}`;
+ const greet = name => `Hello, ${name}!`;
  const area=(width,heigth) => width * heigth;
- const sayHi= () => 'hi';
+ const sayHi= () => 'Hi!';
  const sign = n => {
      if (n > 0) {
         return 'positive';
@@ -34,9 +34,8 @@
    }
    return 'zero';
 }
-const half = n => {n/2}; 
-// this is bug because there is no return
-const half1 =n =>{
+
+const half =n =>{
     return n/2
 }
 // this will be the correct answer, because when you have curly braces you have to write return.
